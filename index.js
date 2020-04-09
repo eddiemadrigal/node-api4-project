@@ -6,11 +6,7 @@ const server = express();
 
 server.use(express.json());
 
-server.get('/', (req, res) => {
-  res.send(`
-    <h2 style='text-align: center; margin-top: 20px;'>Test Home Title</h2>
-  `)
-});
+server.use(require('./routes'));
 
 const port = process.env.PORT || 5000;
 
